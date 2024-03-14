@@ -43,16 +43,17 @@
                     </div>
                     <!-- /Notification -->
                     <div class="search_bar hidden-md">
-                            <input class="typing_bar" type="text" placeholder="Cerca o inizia una nuova chat">
-                            <div class="icon_search">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
+                        <input class="typing_bar" type="text" placeholder="Cerca o inizia una nuova chat">
+                        <div class="icon_search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
                     </div>
                     <!-- /Search bar -->
 
                     <!-- Chat list -->
                     <div class="chat_list">
-                        <div class="chat_list_card  d_flex" v-for="profile in profiles" @click="makeActiveProfile(profile)">
+                        <div class="chat_list_card  d_flex" v-for="profile in profiles"
+                            @click="makeActiveProfile(profile)">
                             <div class="left_side_img">
                                 <img class="img_profile" :src='profile.image' alt="Avatar of a man cartoon">
                             </div>
@@ -72,7 +73,8 @@
                             <div class=" d_flex" v-if="selectedProfile != null">
                                 <div class="left_side_img">
                                     <!-- - al click sul contatto visualizzare il dati del contatto nella barra ==> ternario??? -->
-                                    <img class="img_profile " :src=" selectedProfile ? selectedProfile.image : ''" alt="Contact avatar">
+                                    <img class="img_profile " :src=" selectedProfile ? selectedProfile.image : ''"
+                                        alt="Contact avatar">
                                 </div>
                                 <div class="info_user_profile">
                                     <div class="profile_name">{{selectedProfile ? selectedProfile.name : ''}}</div>
@@ -92,7 +94,8 @@
                         <!-- Creare dinamicamente i messaggi in base al contatto -->
                         <div class="chat_massages_box d_flex">
                             <div class="chat d_flex" v-if="selectedProfile != null">
-                                <div class="message" v-for="messageChat in selectedProfile.messages" :class="makeMessage(messageChat)">
+                                <div class="message" v-for="messageChat in selectedProfile.messages"
+                                    :class="makeMessage(messageChat)">
                                     {{messageChat.message}}
                                 </div>
                             </div>
@@ -102,7 +105,7 @@
                             <div class="emoj_btn">
                                 <i class="fa-regular fa-face-grin"></i>
                             </div>
-                                <input type="text" placeholder="Type a message">
+                            <input type="text" placeholder="Type a message">
                             <div class="audio_message_btn">
                                 <i class="fa-solid fa-microphone"></i>
                             </div>
@@ -121,6 +124,7 @@
 
     </div>
     </div>
+
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./assets/js/main.js"></script>

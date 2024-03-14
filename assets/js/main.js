@@ -1,10 +1,8 @@
 console.log('hello');
 
-// ● Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
-// ● Visualizzazione dinamica dei messaggi: 
-// - tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
-//
-// - visualizzare i messaggi solo del contatto attivato
+// ● Visualizzazione dinamica della lista contatti
+// ● Visualizzazione dinamica dei messaggi
+
 
 const { createApp } = Vue
 
@@ -16,7 +14,7 @@ createApp({
                 {
                     image: './assets/img/avatar_1.jpg',
                     name: 'Michele',
-                    text: 'Lorem ipsum',
+                    text: 'Ultimo messaggio inviato',
                     time: 16.15,
                     messages: [
                         {
@@ -39,7 +37,7 @@ createApp({
                 {
                     image: './assets/img/avatar_2.jpg',
                     name: 'Fabio',
-                    text: 'Lorem ipsum',
+                    text: 'Ultimo messaggio inviato',
                     time: 16.15,
                     messages: [
                         {
@@ -62,7 +60,7 @@ createApp({
                 {
                     image: './assets/img/avatar_3.jpg',
                     name: 'Samuele',
-                    text: 'Lorem ipsum',
+                    text: 'Ultimo messaggio inviato',
                     time: 16.15,
                     messages: [
                         {
@@ -87,7 +85,7 @@ createApp({
                 {
                     image: './assets/img/avatar_4.jpg',
                     name: 'Alessandro B.',
-                    text: 'Lorem ipsum',
+                    text: 'Ultimo messaggio inviato',
                     time: 16.15,
                     messages: [
                         {
@@ -107,7 +105,7 @@ createApp({
                 {
                     image: './assets/img/avatar_5.jpg',
                     name: 'Alessandro L.',
-                    text: 'Lorem ipsum',
+                    text: 'Ultimo messaggio inviato',
                     time: 16.15,
                     messages: [
                         {
@@ -127,7 +125,7 @@ createApp({
                 {
                     image: './assets/img/avatar_6.jpg',
                     name: 'Claudia',
-                    text: 'Lorem ipsum',
+                    text: 'Ultimo messaggio inviato',
                     time: 16.15,
                     messages: [
                         {
@@ -151,7 +149,7 @@ createApp({
                 {
                     image: './assets/img/avatar_7.jpg',
                     name: 'Federico',
-                    text: 'Lorem ipsum',
+                    text: 'Ultimo messaggio inviato',
                     time: 16.15,
                     messages: [
                         {
@@ -170,7 +168,7 @@ createApp({
                 {
                     image: './assets/img/avatar_8.jpg',
                     name: 'Davide',
-                    text: 'Lorem ipsum',
+                    text: 'Ultimo messaggio inviato',
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -210,6 +208,8 @@ createApp({
                 return 'arrived_message'
             }
         }
+
+        
     },
 
     // ● Click sul contatto mostra la conversazione del contatto cliccato
