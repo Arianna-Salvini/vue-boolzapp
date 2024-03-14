@@ -26,6 +26,37 @@ createApp({
                     text: 'Lorem ipsum',
                     time: 16.15,
                 },
+                {
+                    image: './assets/img/avatar_4.jpg',
+                    name: 'Alessandro B.',
+                    text: 'Lorem ipsum',
+                    time: 16.15,
+                },
+                {
+                    image: './assets/img/avatar_5.jpg',
+                    name: 'Alessandro L.',
+                    text: 'Lorem ipsum',
+                    time: 16.15,
+                },
+                {
+                    image: './assets/img/avatar_5.jpg',
+                    name: 'Claudia',
+                    text: 'Lorem ipsum',
+                    time: 16.15,
+                },
+                {
+                    image: './assets/img/avatar_7.jpg',
+                    name: 'Federico',
+                    text: 'Lorem ipsum',
+                    time: 16.15,
+                },
+                {
+                    image: './assets/img/avatar_8.jpg',
+                    name: 'Davide',
+                    text: 'Lorem ipsum',
+                    time: 16.15,
+                },
+
 
             ]
 
