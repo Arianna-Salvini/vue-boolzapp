@@ -4,8 +4,8 @@ console.log('hello');
 // ● Visualizzazione dinamica dei messaggi: 
 // - tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
 //
-    // - visualizzare i messaggi solo del contatto attivato
-    
+// - visualizzare i messaggi solo del contatto attivato
+
 const { createApp } = Vue
 
 createApp({
@@ -64,7 +64,6 @@ createApp({
                     name: 'Samuele',
                     text: 'Lorem ipsum',
                     time: 16.15,
-                    visible: false,
                     messages: [
                         {
                             date: '28/03/2020 10:10:40',
@@ -90,7 +89,6 @@ createApp({
                     name: 'Alessandro B.',
                     text: 'Lorem ipsum',
                     time: 16.15,
-                    visible: false,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -111,7 +109,6 @@ createApp({
                     name: 'Alessandro L.',
                     text: 'Lorem ipsum',
                     time: 16.15,
-                    visible: false,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -135,7 +132,6 @@ createApp({
                     name: 'Claudia',
                     text: 'Lorem ipsum',
                     time: 16.15,
-                    visible: false,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -160,7 +156,6 @@ createApp({
                     name: 'Federico',
                     text: 'Lorem ipsum',
                     time: 16.15,
-                    visible: false,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -179,8 +174,6 @@ createApp({
                     image: './assets/img/avatar_8.jpg',
                     name: 'Davide',
                     text: 'Lorem ipsum',
-                    time: 16.15,
-                    visible: false,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -200,19 +193,24 @@ createApp({
                         },
 
                     ]
-                },
-            ]
 
+                },
+            ],
         }
     },
-
-    methods : {
-        // Attivare il contatto cliccato
-        isActive(profile){
-            this.selectedProfile = profile
-          } 
-        },
-        // ● Click sul contatto mostra la conversazione del contatto cliccato
-
     
+    methods: {
+        // Attivare il contatto cliccato
+        makeActiveProfile(profile) {
+            this.selectedProfile = profile
+        },
+
+    },
+
+    // ● Click sul contatto mostra la conversazione del contatto cliccato
+
+    mounted() {
+      },
+
 }).mount('#app')
+

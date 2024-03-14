@@ -52,7 +52,7 @@
 
                     <!-- Chat list -->
                     <div class="chat_list">
-                        <div class="chat_list_card  d_flex" v-for="profile in profiles" @click="isActive(profile)">
+                        <div class="chat_list_card  d_flex" v-for="profile in profiles" @click="makeActiveProfile(profile)">
                             <div class="left_side_img">
                                 <img class="img_profile" :src='profile.image' alt="Avatar of a man cartoon">
                             </div>
@@ -89,8 +89,8 @@
                         </div>
                         <!-- /Menu right -->
                         <div class="chat_massages_box d_flex" >
-                            <div class="message" >
-
+                            <div class="message">
+                                
                             </div>
                             <div class="arrived_message">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, sed reiciendis illo hic
