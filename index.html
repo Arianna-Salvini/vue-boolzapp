@@ -15,7 +15,7 @@
 
 <body>
     <div class="background">
-        <div class="container">
+        <div class="container" id="app">
             <!-- Left side of app -->
             <div class="row">
                 <div class="col_left hidden-sm">
@@ -51,8 +51,8 @@
                     <!-- /Search bar -->
 
                     <!-- Chat list -->
-                    <div class="chat_list" id="app">
-                        <div class="chat_list_card  d_flex" v-for="profile in profiles">
+                    <div class="chat_list">
+                        <div class="chat_list_card  d_flex" v-for="profile in profiles" @click="isActive(profile)">
                             <div class="left_side_img">
                                 <img class="img_profile" :src='profile.image' alt="Avatar of a man cartoon">
                             </div>
@@ -64,124 +64,6 @@
                                 <div class="time">{{profile.time}}</div>
                             </div>
                         </div>
-                        
-                        <!-- contact card -->
-                        <div class="chat_list_card  d_flex">
-                            <div class="left_side_img  ">
-                                <img class="img_profile" src="./assets/img/avatar_8.jpg" alt="">
-                            </div>
-                            <div class="preview_text right_side d_flex">
-                                <div class="info_profile">
-                                    <div class="name_profile_prev">Alessandro B.</div>
-                                    <div class="text_preview">Lorem ipsum dolor sit amet</div>
-                                </div>
-                                <div class="time">16.15</div>
-                            </div>
-                        </div>
-                        <!-- contact card -->
-                        <div class="chat_list_card  d_flex">
-                            <div class="left_side_img  ">
-                                <img class="img_profile" src="./assets/img/avatar_7.jpg" alt="">
-                            </div>
-                            <div class="preview_text right_side d_flex">
-                                <div class="info_profile">
-                                    <div class="name_profile_prev">Alessandro L.</div>
-                                    <div class="text_preview">Lorem ipsum dolor sit amet</div>
-                                </div>
-                                <div class="time">16.15</div>
-                            </div>
-                        </div>
-                        <!-- contact card -->
-                        <div class="chat_list_card  d_flex">
-                            <div class="left_side_img  ">
-                                <img class="img_profile" src="./assets/img/avatar_6.jpg" alt="">
-                            </div>
-                            <div class="preview_text right_side d_flex">
-                                <div class="info_profile">
-                                    <div class="name_profile_prev">Emma</div>
-                                    <div class="text_preview">Lorem ipsum dolor sit amet</div>
-                                </div>
-                                <div class="time">16.15</div>
-                            </div>
-                        </div>
-                        <div class="chat_list_card  d_flex">
-                            <div class="left_side_img  ">
-                                <img class="img_profile" src="./assets/img/avatar_1.jpg" alt="">
-                            </div>
-                            <div class="preview_text right_side d_flex">
-                                <div class="info_profile">
-                                    <div class="name_profile_prev">Michele</div>
-                                    <div class="text_preview">Lorem ipsum dolor sit amet</div>
-                                </div>
-                                <div class="time">16.15</div>
-                            </div>
-                        </div>
-                        <!-- contact card -->
-                        <div class="chat_list_card  d_flex">
-                            <div class="left_side_img  ">
-                                <img class="img_profile" src="./assets/img/avatar_2.jpg" alt="">
-                            </div>
-                            <div class="preview_text right_side d_flex ">
-                                <div class="info_profile">
-                                    <div class="name_profile_prev">Fabio</div>
-                                    <div class="text_preview">Lorem ipsum dolor sit amet</div>
-                                </div>
-                                <div class="time">16.15</div>
-                            </div>
-                        </div>
-                        <!-- contact card -->
-                        <div class="chat_list_card  d_flex">
-                            <div class="left_side_img  ">
-                                <img class="img_profile" src="./assets/img/avatar_3.jpg" alt="">
-                            </div>
-                            <div class="preview_text right_side d_flex">
-                                <div class="info_profile">
-                                    <div class="name_profile_prev">Samuele</div>
-                                    <div class="text_preview">Lorem ipsum dolor sit amet</div>
-                                </div>
-                                <div class="time">16.15</div>
-                            </div>
-                        </div>
-                        <!-- contact card -->
-                        <div class="chat_list_card  d_flex">
-                            <div class="left_side_img  ">
-                                <img class="img_profile" src="./assets/img/avatar_8.jpg" alt="">
-                            </div>
-                            <div class="preview_text right_side d_flex">
-                                <div class="info_profile">
-                                    <div class="name_profile_prev">Alessandro B.</div>
-                                    <div class="text_preview">Lorem ipsum dolor sit amet</div>
-                                </div>
-                                <div class="time">16.15</div>
-                            </div>
-                        </div>
-                        <!-- contact card -->
-                        <div class="chat_list_card  d_flex">
-                            <div class="left_side_img  ">
-                                <img class="img_profile" src="./assets/img/avatar_7.jpg" alt="">
-                            </div>
-                            <div class="preview_text right_side d_flex">
-                                <div class="info_profile">
-                                    <div class="name_profile_prev">Alessandro L.</div>
-                                    <div class="text_preview">Lorem ipsum dolor sit amet</div>
-                                </div>
-                                <div class="time">16.15</div>
-                            </div>
-                        </div>
-                        <!-- contact card -->
-                        <div class="chat_list_card  d_flex">
-                            <div class="left_side_img  ">
-                                <img class="img_profile" src="./assets/img/avatar_6.jpg" alt="">
-                            </div>
-                            <div class="preview_text right_side d_flex">
-                                <div class="info_profile">
-                                    <div class="name_profile_prev">Emma</div>
-                                    <div class="text_preview">Lorem ipsum dolor sit amet</div>
-                                </div>
-                                <div class="time">16.15</div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
                 <div class="col-right ">
@@ -189,10 +71,11 @@
                         <div class="chat_menu d_flex ">
                             <div class=" d_flex">
                                 <div class="left_side_img">
-                                    <img class="img_profile " src="./assets/img/avatar_1.jpg" alt="">
+                                    <!-- - al click sul contatto visualizzare il dati del contatto nella barra ==> ternario??? -->
+                                    <img class="img_profile " :src=" selectedProfile ? selectedProfile.image : ''" alt="Contact avatar">
                                 </div>
                                 <div class="info_user_profile">
-                                    <div class="profile_name">Michele</div>
+                                    <div class="profile_name">{{selectedProfile ? selectedProfile.name : ''}}</div>
                                     <div class="last_access">Ultimo accesso oggi alle 16.26</div>
                                 </div>
                             </div>
@@ -205,7 +88,10 @@
                             </div>
                         </div>
                         <!-- /Menu right -->
-                        <div class="chat_massages_box d_flex">
+                        <div class="chat_massages_box d_flex" >
+                            <div class="message" >
+
+                            </div>
                             <div class="arrived_message">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, sed reiciendis illo hic
                                 repellendus, possimus necessitatibus perferendis dolorem atque sunt tenetur animi
