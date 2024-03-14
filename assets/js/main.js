@@ -202,6 +202,7 @@ createApp({
             this.selectedProfile = profile
         },
 
+        // dividere in base alla classe i messsaggi inviati dai messaggi ricevuti
         makeMessage(messageChat) {
             if (messageChat.status === 'sent') {
                 return 'sent_message'

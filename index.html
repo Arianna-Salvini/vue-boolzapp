@@ -88,9 +88,13 @@
                             </div>
                         </div>
                         <!-- /Menu right -->
-                        <div class="chat_massages_box d_flex" v-if="selectedProfile != null" >
-                            <div class="message" v-for="messageChat in selectedProfile.messages" :class="makeMessage(messageChat)">
-                                {{messageChat.message}}
+
+                        <!-- Creare dinamicamente i messaggi in base al contatto -->
+                        <div class="chat_massages_box d_flex">
+                            <div class="chat d_flex" v-if="selectedProfile != null">
+                                <div class="message" v-for="messageChat in selectedProfile.messages" :class="makeMessage(messageChat)">
+                                    {{messageChat.message}}
+                                </div>
                             </div>
                         </div>
                         <!-- /Chat-->

@@ -239,11 +239,16 @@ i {
     width: 100%;
     height: calc(100% - 9rem);
     background-image: url(../img/mine.jpg);
-    padding-top: 2rem;
-    overflow-y: auto;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    .chat {
+        width: 100%;
+        padding-top: 2rem;
+        overflow-y: auto;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
 }
+
+
 
 /* massages style */
 
