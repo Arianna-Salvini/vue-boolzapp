@@ -121,9 +121,6 @@ createApp({
                             message: 'Va bene, stasera la sento',
                             status: 'received'
                         },
-                        {
-
-                        },
 
                     ]
                 },
@@ -198,19 +195,26 @@ createApp({
             ],
         }
     },
-    
+
     methods: {
         // Attivare il contatto cliccato
         makeActiveProfile(profile) {
             this.selectedProfile = profile
         },
 
+        makeMessage(messageChat) {
+            if (messageChat.status === 'sent') {
+                return 'sent_message'
+            } else {
+                return 'arrived_message'
+            }
+        }
     },
 
     // ● Click sul contatto mostra la conversazione del contatto cliccato
 
     mounted() {
-      },
+    },
 
 }).mount('#app')
 
