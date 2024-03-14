@@ -39,7 +39,7 @@ createApp({
                     time: 16.15,
                 },
                 {
-                    image: './assets/img/avatar_5.jpg',
+                    image: './assets/img/avatar_6.jpg',
                     name: 'Claudia',
                     text: 'Lorem ipsum',
                     time: 16.15,
@@ -56,8 +56,6 @@ createApp({
                     text: 'Lorem ipsum',
                     time: 16.15,
                 },
-
-
             ]
 
         }
