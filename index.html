@@ -51,45 +51,20 @@
                     <!-- /Search bar -->
 
                     <!-- Chat list -->
-                    <div class="chat_list">
-                        <div class="chat_list_card  d_flex">
-                            <div class="left_side_img  ">
-                                <img class="img_profile" src="./assets/img/avatar_1.jpg" alt="">
+                    <div class="chat_list" id="app">
+                        <div class="chat_list_card  d_flex" v-for="profile in profiles">
+                            <div class="left_side_img">
+                                <img class="img_profile" :src='profile.image' alt="Avatar of a man cartoon">
                             </div>
                             <div class="preview_text right_side d_flex">
                                 <div class="info_profile">
-                                    <div class="name_profile_prev">Michele</div>
-                                    <div class="text_preview">Lorem ipsum dolor sit amet</div>
+                                    <div class="name_profile_prev">{{profile.name}}</div>
+                                    <div class="text_preview">{{profile.text}}</div>
                                 </div>
-                                <div class="time">16.15</div>
+                                <div class="time">{{profile.time}}</div>
                             </div>
                         </div>
-                        <!-- contact card -->
-                        <div class="chat_list_card  d_flex">
-                            <div class="left_side_img  ">
-                                <img class="img_profile" src="./assets/img/avatar_2.jpg" alt="">
-                            </div>
-                            <div class="preview_text right_side d_flex ">
-                                <div class="info_profile">
-                                    <div class="name_profile_prev">Fabio</div>
-                                    <div class="text_preview">Lorem ipsum dolor sit amet</div>
-                                </div>
-                                <div class="time">16.15</div>
-                            </div>
-                        </div>
-                        <!-- contact card -->
-                        <div class="chat_list_card  d_flex">
-                            <div class="left_side_img  ">
-                                <img class="img_profile" src="./assets/img/avatar_3.jpg" alt="">
-                            </div>
-                            <div class="preview_text right_side d_flex">
-                                <div class="info_profile">
-                                    <div class="name_profile_prev">Samuele</div>
-                                    <div class="text_preview">Lorem ipsum dolor sit amet</div>
-                                </div>
-                                <div class="time">16.15</div>
-                            </div>
-                        </div>
+                        
                         <!-- contact card -->
                         <div class="chat_list_card  d_flex">
                             <div class="left_side_img  ">
