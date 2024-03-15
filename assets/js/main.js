@@ -209,7 +209,8 @@ createApp({
                 return 'arrived_message'
             }
         },
-
+        // - l’utente scrive un testo nella parte bassa
+        // - digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
         sendMessage(){
         if(this.selectedProfile && this.messageTyped.length > 0 ){
             let newMessageUser = {
@@ -222,7 +223,7 @@ createApp({
             this.replyMessages()
         }
         },
-
+        // riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
         replyMessages(){
             setTimeout(() => {
                 let replyMessage = {
