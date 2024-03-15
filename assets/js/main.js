@@ -241,7 +241,7 @@ createApp({
             }, 1000)
         },
 
-            // shearchBarProfile() {
+            // searchBarProfile() {
     //     // se la barra di ricerca è vuota visualizzare tutti i contatti
     //     const lowerCaseProfile = this.searchedProfile.toLowerCase()
     //     if (lowerCaseProfile === '') {
@@ -254,17 +254,10 @@ createApp({
     //         })
     //     }
     // },
-
-    
-
-    },
-
-    computed: {
         searchBarProfile(){
             let searchLowerCase = this.searchedProfile.toLowerCase()
             // let profileLowercase = this.profile.name.toLowerCase()
-            // Se non sto cercando non se la barra è vuota
-            if (!searchLowerCase) {
+            if (searchLowerCase === '') {
                 return this.profiles
             } else {
                 return this.profiles.filter(profile => {
@@ -273,7 +266,6 @@ createApp({
             }
         },
     },
-
 
     mounted() {
 
