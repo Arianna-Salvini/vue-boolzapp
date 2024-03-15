@@ -54,7 +54,7 @@
 
 .col_left {
     width: 389px;
-    border-right:1px solid var(--zapp-dark);
+    border-right: 1px solid var(--zapp-dark);
 }
 
 .col-right {
@@ -81,18 +81,19 @@ i {
 ::-webkit-scrollbar {
     width: 0.3rem;
     background-color: var(--zapp-light);
-    
-  }
-  ::-webkit-scrollbar-track {
+
+}
+
+::-webkit-scrollbar-track {
     background: var(--zapp-light);
     box-shadow: inset 0 0 3px var(--zapp-dark);
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     border-bottom: 100vh solid var(--zapp-lighter);
     border-radius: 10px;
-    
-  }
+
+}
 
 /* left side - menu */
 .icons_menu.right_side {
@@ -110,7 +111,7 @@ i {
     color: var(--zapp-darker);
     position: relative;
 
-    & .icon_search{
+    & .icon_search {
         width: 4.5rem;
         height: 3rem;
         padding: 0.8rem;
@@ -120,10 +121,10 @@ i {
         left: -0.3rem;
     }
 
-    & .fa-magnifying-glass{
+    & .fa-magnifying-glass {
         font-size: 1rem;
     }
-    
+
 }
 
 
@@ -166,7 +167,7 @@ i {
     font-size: 1rem;
 }
 
-.time{
+.time {
     padding: 1rem;
 }
 
@@ -239,6 +240,7 @@ i {
     width: 100%;
     height: calc(100% - 9rem);
     background-image: url(../img/mine.jpg);
+
     .chat {
         width: 100%;
         max-height: 100%;
@@ -247,6 +249,12 @@ i {
         flex-direction: column;
         flex-wrap: nowrap;
     }
+
+    .default_message{
+        color: var(--zapp-darkest);
+        margin: auto;
+        font-size: 1.1rem;
+    }
 }
 
 
@@ -254,7 +262,7 @@ i {
 /* massages style */
 
 .arrived_message,
-.sent_message{
+.sent_message {
     padding: 0.7rem;
     margin: 0.5rem 3rem;
     background-color: var(--zapp-lighter);
@@ -263,7 +271,7 @@ i {
     display: flex;
     flex-direction: column;
 
-    .time_message_sent{
+    .time_message_sent {
         font-size: 0.7rem;
         color: var(--zapp-darker);
         padding: 0.5rem 0 0 0.3rem;
@@ -271,12 +279,12 @@ i {
     }
 }
 
-.arrived_message{
+.arrived_message {
     align-self: flex-start;
     background-color: var(--zapp-lighter);
 }
 
-.sent_message{
+.sent_message {
     align-self: flex-end;
     background-color: var(--zapp-sent-bubble);
 }
@@ -375,7 +383,7 @@ i {
         width: 100%;
     }
 
-    .chat_massages_box{
+    .chat_massages_box {
         max-width: 100%;
     }
 }

@@ -13,6 +13,7 @@ createApp({
             selectedProfile: null,
             messageTyped: '',
             searchedProfile: '',
+            defaultMessage:'Seleziona una contatto per visualizzare la chat',
             profiles: [
                 {
                     image: './assets/img/avatar_1.jpg',
@@ -201,6 +202,7 @@ createApp({
         // Attivare il contatto cliccato
         makeActiveProfile(profile) {
             this.selectedProfile = profile
+            this.defaultMessage=''
         },
         // dividere in base alla classe i messsaggi inviati dai messaggi ricevuti
         makeMessage(messageChat) {

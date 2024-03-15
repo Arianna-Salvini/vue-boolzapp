@@ -93,6 +93,7 @@
 
                         <!-- Creare dinamicamente i messaggi in base al contatto -->
                         <div class="chat_massages_box d_flex">
+                            <div class="default_message">{{defaultMessage}}</div>
                             <div class="chat d_flex" v-if="selectedProfile != null">
                                 <div class="message" v-for="messageChat in selectedProfile.messages"
                                     :class="makeMessage(messageChat)">
@@ -128,7 +129,7 @@
     </div>
     </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
