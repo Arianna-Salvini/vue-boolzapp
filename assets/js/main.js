@@ -219,8 +219,21 @@ createApp({
             }
             this.selectedProfile.messages.push(newMessageUser)
             this.messageTyped = ''
+            this.replyMessages()
         }
-        }
+        },
+
+        replyMessages(){
+            setTimeout(() => {
+                let replyMessage = {
+                    date : "LUxon" ,
+                message: "Ok",
+                status: 'received'
+                }
+            this.selectedProfile.messages.push(replyMessage)    
+
+            }, 1000)
+        },
         
     },
 
