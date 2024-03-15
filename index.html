@@ -43,7 +43,8 @@
                     </div>
                     <!-- /Notification -->
                     <div class="search_bar hidden-md">
-                        <input class="typing_bar" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchedProfile">
+                        <input class="typing_bar" type="text" placeholder="Cerca o inizia una nuova chat"
+                            v-model="searchedProfile">
                         <div class="icon_search">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
@@ -68,7 +69,8 @@
                     </div>
                 </div>
                 <div class="col-right ">
-                    <div class="right message_side ">
+                    <div class="right message_side">
+                        <div class="contact_bar_right d_flex">
                             <div class=" d_flex" v-if="selectedProfile !== null">
                                 <div class="left_side_img">
                                     <!-- - al click sul contatto visualizzare il dati del contatto nella barra ==> ternario??? -->
@@ -81,24 +83,28 @@
                                 </div>
                             </div>
                             <div class="chat_menu d_flex" v-if="selectedProfile === null">
-                                <div class=" d_flex " >
+                                <div class=" d_flex ">
                                     <div class="left_side_img">
                                         <!-- - al click sul contatto visualizzare il dati del contatto nella barra ==> ternario??? -->
-                                        <img class="img_profile " src="./assets/img/avatar_io.jpg"
-                                            alt="Contact avatar">
+                                        <img class="img_profile " src="./assets/img/avatar_io.jpg" alt="Contact avatar">
                                     </div>
                                     <div class="info_user_profile">
                                         <div class="profile_name">Seleziona un contatto</div>
                                         <div class="last_access">15.15</div>
                                     </div>
                                 </div>
-                            <div class="right_menu hidden-sm ">
-                                <div class="icons_menu">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                    <i class="fa-solid fa-paperclip"></i>
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                            <!-- /.contact_bar_right -->
+                            <div class="contact_bar_left">
+                                <div class="right_menu hidden-sm ">
+                                    <div class="icons_menu">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <i class="fa-solid fa-paperclip"></i>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- /.contact_bar_left -->
                         </div>
                         <!-- /Menu right -->
 
@@ -119,8 +125,9 @@
                                 <i class="fa-regular fa-face-grin"></i>
                             </div>
 
-                             <!-- - digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde -->
-                            <input type="text" v-model.trim="messageTyped" placeholder="Type a message" @keyup.enter="sendMessage()">
+                            <!-- - digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde -->
+                            <input type="text" v-model.trim="messageTyped" placeholder="Type a message"
+                                @keyup.enter="sendMessage()">
                             <div class="audio_message_btn">
                                 <i class="fa-solid fa-microphone"></i>
                             </div>
@@ -140,7 +147,7 @@
     </div>
     </div>
 
-<script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
