@@ -2,6 +2,7 @@ console.log('hello');
 
 // ● Visualizzazione dinamica della lista contatti
 // ● Visualizzazione dinamica dei messaggi
+// ● Click sul contatto mostra la conversazione del contatto cliccato
 
 
 const { createApp } = Vue
@@ -11,6 +12,7 @@ createApp({
         return {
             selectedProfile: null,
             messageTyped: '',
+            searchedProfile: '',
             profiles: [
                 {
                     image: './assets/img/avatar_1.jpg',
@@ -200,7 +202,6 @@ createApp({
         makeActiveProfile(profile) {
             this.selectedProfile = profile
         },
-
         // dividere in base alla classe i messsaggi inviati dai messaggi ricevuti
         makeMessage(messageChat) {
             if (messageChat.status === 'sent') {
@@ -211,38 +212,71 @@ createApp({
         },
         // - l’utente scrive un testo nella parte bassa
         // - digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
-        sendMessage(){
-        if(this.selectedProfile && this.messageTyped.length > 0 ){
-            let newMessageUser = {
-                date : "LUxon" ,
-                message: this.messageTyped,
-                status: 'sent',
+        sendMessage() {
+            // se il si è selezionato un contatto e se la lunghezza del messaggo scritto è maggiore di 0 crea il nuovo messaggio 'sent'
+            if (this.selectedProfile && this.messageTyped.length > 0) {
+                let newMessageUser = {
+                    date: "LUxon",
+                    message: this.messageTyped,
+                    status: 'sent',
+                }
+                // pusho il messaggio nell'array dei messsaggi
+                this.selectedProfile.messages.push(newMessageUser)
+                // calcello all'invio la barra
+                this.messageTyped = ''
+                //Attivo il messaggio di risposta
+                this.replyMessages()
             }
-            this.selectedProfile.messages.push(newMessageUser)
-            this.messageTyped = ''
-            this.replyMessages()
-        }
         },
         // riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
-        replyMessages(){
+        replyMessages() {
             setTimeout(() => {
                 let replyMessage = {
-                    date : "LUxon" ,
-                message: "Ok",
-                status: 'received'
+                    date: "LUxon",
+                    message: "Ok",
+                    status: 'received'
                 }
-            this.selectedProfile.messages.push(replyMessage)    
+                this.selectedProfile.messages.push(replyMessage)
 
             }, 1000)
         },
-        
+
+            // shearchBarProfile() {
+    //     // se la barra di ricerca è vuota visualizzare tutti i contatti
+    //     const lowerCaseProfile = this.searchedProfile.toLowerCase()
+    //     if (lowerCaseProfile === '') {
+    //         return this.profiles
+    //     } else {
+    //         // altrimenti visualizza i contatti che contengono la stringa digitata
+    //         return this.profiles.filter(function (profile) {
+    //             return this.profile.name.toLowerCase().includes(lowerCaseProfile)
+    //             // confrontare il nome senza sensitivecase
+    //         })
+    //     }
+    // },
+
+    
+
     },
 
-    // ● Click sul contatto mostra la conversazione del contatto cliccato
+    computed: {
+        searchBarProfile(){
+            let searchLowerCase = this.searchedProfile.toLowerCase()
+            // let profileLowercase = this.profile.name.toLowerCase()
+            // Se non sto cercando non se la barra è vuota
+            if (!searchLowerCase) {
+                return this.profiles
+            } else {
+                return this.profiles.filter(profile => {
+                    return profile.name.toLowerCase().includes(searchLowerCase)
+                })
+            }
+        },
+    },
+
 
     mounted() {
-        console.log(this.messageTyped);
-    
+
     },
 
 }).mount('#app')
