@@ -69,8 +69,7 @@
                 </div>
                 <div class="col-right ">
                     <div class="right message_side ">
-                        <div class="chat_menu d_flex ">
-                            <div class=" d_flex" v-if="selectedProfile != null">
+                            <div class=" d_flex" v-if="selectedProfile !== null">
                                 <div class="left_side_img">
                                     <!-- - al click sul contatto visualizzare il dati del contatto nella barra ==> ternario??? -->
                                     <img class="img_profile " :src=" selectedProfile ? selectedProfile.image : ''"
@@ -81,6 +80,18 @@
                                     <div class="last_access">Ultimo accesso oggi alle 16.26</div>
                                 </div>
                             </div>
+                            <div class="chat_menu d_flex" v-if="selectedProfile === null">
+                                <div class=" d_flex " >
+                                    <div class="left_side_img">
+                                        <!-- - al click sul contatto visualizzare il dati del contatto nella barra ==> ternario??? -->
+                                        <img class="img_profile " src="./assets/img/avatar_io.jpg"
+                                            alt="Contact avatar">
+                                    </div>
+                                    <div class="info_user_profile">
+                                        <div class="profile_name">Seleziona un contatto</div>
+                                        <div class="last_access">15.15</div>
+                                    </div>
+                                </div>
                             <div class="right_menu hidden-sm ">
                                 <div class="icons_menu">
                                     <i class="fa-solid fa-magnifying-glass"></i>
