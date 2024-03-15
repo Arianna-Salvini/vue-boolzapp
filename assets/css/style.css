@@ -254,6 +254,7 @@ i {
         color: var(--zapp-darkest);
         margin: auto;
         font-size: 1.1rem;
+        text-shadow: 1px 1px 3px var(--zapp-dark);
     }
 }
 
