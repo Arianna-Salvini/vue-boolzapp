@@ -254,9 +254,12 @@ createApp({
     //         })
     //     }
     // },
+        
+    },
+
+    computed: {
         searchBarProfile(){
             let searchLowerCase = this.searchedProfile.toLowerCase()
-            // let profileLowercase = this.profile.name.toLowerCase()
             if (searchLowerCase === '') {
                 return this.profiles
             } else {
@@ -265,7 +268,7 @@ createApp({
                 })
             }
         },
-    },
+      },
 
     mounted() {
 

@@ -51,7 +51,7 @@
                     <!-- /Search bar -->
 
                     <!-- Chat list -->
-                    <div class="chat_list"  v-if="searchedProfile === 0 || searchBarProfile.length > 0">
+                    <div class="chat_list">
                         <div class="chat_list_card  d_flex" v-for="profile in searchBarProfile"
                             @click="makeActiveProfile(profile)">
                             <div class="left_side_img">
