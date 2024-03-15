@@ -255,11 +255,20 @@ i {
 
 .arrived_message,
 .sent_message{
-    padding: 1rem;
+    padding: 0.7rem;
     margin: 0.5rem 3rem;
     background-color: var(--zapp-lighter);
     border-radius: 0.5rem;
     max-width: 60%;
+    display: flex;
+    flex-direction: column;
+
+    .time_message_sent{
+        font-size: 0.7rem;
+        color: var(--zapp-darker);
+        padding: 0.5rem 0 0 0.3rem;
+        align-self: flex-end;
+    }
 }
 
 .arrived_message{
