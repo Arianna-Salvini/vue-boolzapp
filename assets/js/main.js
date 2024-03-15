@@ -10,6 +10,7 @@ createApp({
     data() {
         return {
             selectedProfile: null,
+            messageTyped: '',
             profiles: [
                 {
                     image: './assets/img/avatar_1.jpg',
@@ -207,14 +208,27 @@ createApp({
             } else {
                 return 'arrived_message'
             }
-        }
+        },
 
+        sendMessage(){
+        if(this.selectedProfile && this.messageTyped.length > 0 ){
+            let newMessageUser = {
+                date : "LUxon" ,
+                message: this.messageTyped,
+                status: 'sent',
+            }
+            this.selectedProfile.messages.push(newMessageUser)
+            this.messageTyped = ''
+        }
+        }
         
     },
 
     // ● Click sul contatto mostra la conversazione del contatto cliccato
 
     mounted() {
+        console.log(this.messageTyped);
+    
     },
 
 }).mount('#app')

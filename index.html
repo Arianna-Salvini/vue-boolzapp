@@ -105,7 +105,7 @@
                             <div class="emoj_btn">
                                 <i class="fa-regular fa-face-grin"></i>
                             </div>
-                            <input type="text" placeholder="Type a message">
+                            <input type="text" v-model.trim="messageTyped" placeholder="Type a message"  @keyup.enter="sendMessage()">
                             <div class="audio_message_btn">
                                 <i class="fa-solid fa-microphone"></i>
                             </div>
