@@ -242,20 +242,6 @@ createApp({
 
             }, 1000)
         },
-
-            // searchBarProfile() {
-    //     // se la barra di ricerca è vuota visualizzare tutti i contatti
-    //     const lowerCaseProfile = this.searchedProfile.toLowerCase()
-    //     if (lowerCaseProfile === '') {
-    //         return this.profiles
-    //     } else {
-    //         // altrimenti visualizza i contatti che contengono la stringa digitata
-    //         return this.profiles.filter(function (profile) {
-    //             return this.profile.name.toLowerCase().includes(lowerCaseProfile)
-    //             // confrontare il nome senza sensitivecase
-    //         })
-    //     }
-    // },
         
     },
 

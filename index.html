@@ -53,8 +53,7 @@
 
                     <!-- Chat list -->
                     <div class="chat_list">
-                        <div class="chat_list_card  d_flex" v-for="profile in searchBarProfile"
-                            @click="makeActiveProfile(profile)">
+                        <div class="chat_list_card  d_flex" v-for="profile in searchBarProfile" @click="makeActiveProfile(profile)">
                             <div class="left_side_img">
                                 <img class="img_profile" :src='profile.image' alt="Avatar of a man cartoon">
                             </div>
@@ -75,7 +74,7 @@
                                 <div class="left_side_img">
                                     <!-- - al click sul contatto visualizzare il dati del contatto nella barra ==> ternario??? -->
                                     <img class="img_profile " :src=" selectedProfile ? selectedProfile.image : ''"
-                                        alt="Contact avatar">
+                                        ƒalt="Contact avatar">
                                 </div>
                                 <div class="info_user_profile">
                                     <div class="profile_name">{{selectedProfile ? selectedProfile.name : ''}}</div>
@@ -124,8 +123,7 @@
                             <div class="emoj_btn">
                                 <i class="fa-regular fa-face-grin"></i>
                             </div>
-
-                            <!-- - digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde -->
+                            <!-- digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde -->
                             <input type="text" v-model.trim="messageTyped" placeholder="Type a message"
                                 @keyup.enter="sendMessage()">
                             <div class="audio_message_btn">
@@ -140,13 +138,6 @@
         </div>
     </div>
     <!-- Right side of app -->
-
-
-    </div>
-
-    </div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./assets/js/main.js"></script>
