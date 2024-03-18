@@ -13,6 +13,7 @@ createApp({
             selectedProfile: null,
             messageTyped: '',
             searchedProfile: '',
+            lastAccess: luxon.DateTime.now().toFormat('HH:mm'),
             defaultMessage:'Seleziona una contatto per visualizzare la chat',
             profiles: [
                 {
@@ -260,6 +261,7 @@ createApp({
       },
 
     mounted() {
+
     },
 
 }).mount('#app')

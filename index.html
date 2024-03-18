@@ -62,7 +62,7 @@
                                     <div class="name_profile_prev">{{profile.name}}</div>
                                     <div class="text_preview">{{profile.text}}</div>
                                 </div>
-                                <div class="time">{{profile.time}}</div>
+                                <div class="time">{{lastAccess}}</div>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="info_user_profile">
                                     <div class="profile_name">{{selectedProfile ? selectedProfile.name : ''}}</div>
-                                    <div class="last_access">Ultimo accesso oggi alle {{}}</div>
+                                    <div class="last_access">Ultimo accesso oggi alle {{lastAccess}}</div>
                                 </div>
                             </div>
                             <div class="chat_menu d_flex" v-if="selectedProfile === null">
@@ -89,7 +89,7 @@
                                     </div>
                                     <div class="info_user_profile">
                                         <div class="profile_name">Seleziona un contatto</div>
-                                        <div class="last_access">{{}}</div>
+                                        <div class="last_access">Ultimo accesso oggi alle {{lastAccess}}</div>
                                     </div>
                                 </div>
                             </div>
